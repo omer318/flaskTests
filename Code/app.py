@@ -3,7 +3,11 @@ import json
 from markupsafe import escape
 
 app = Flask(__name__)
-days = {}
+days = {"Sunday": "off",
+        "Monday": "off",
+        "Tuesday": "off",
+        "Wednesday": "off",
+        "Thursday": "off"}
 
 
 @app.route("/table/")

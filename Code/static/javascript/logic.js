@@ -8,7 +8,7 @@ function collect() {
     let form = document.getElementById("form").getElementsByTagName("label")
     let data = {}
     for (let i = 0; i < 5; i++) {
-        data[form[i].id] = form[i].className
+        data[capitalize(form[i].id)] = form[i].className
     }
     console.log(JSON.stringify(data))
 
@@ -19,4 +19,10 @@ function collect() {
         }
     })
     return "fs"
+}
+
+
+const capitalize = (s) => {
+  if (typeof s !== 'string') return ''
+  return s.charAt(0).toUpperCase() + s.slice(1)
 }

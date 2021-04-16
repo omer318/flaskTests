@@ -15,26 +15,35 @@ label {
   padding: 10px;
   margin: 10px;
   text-align: center;
+  box-shadow: 5px 5px 5px #61686d;
 }
 label.on {
   background: #7ad67a;
 }
 label.on:hover {
   background: #67d067;
+  box-shadow: 5px 5px 4px #4a4f53;
 }
 label.off {
   background: #d93b3b;
 }
 label.off:hover {
   background: #d22929;
+  box-shadow: 5px 5px 4px #4a4f53;
 }
 button {
   padding-left: 100px;
   padding-right: 100px;
-  align-self: auto;
-  background: #a5d0f3;
+  align-self: center;
+  background: #7c9cdd;
+  box-shadow: 5px 5px 5px #61686d;
 }
 button:hover {
-  background: #5fa2d7;
+  background: #688dd8;
+  box-shadow: 5px 5px 4px #4a4f53;
+}
+button:focus {
+  background: #547dd2;
+  box-shadow: 5px 5px 3px #2b2e30;
 }
 /*# sourceMappingURL=table.css.map */

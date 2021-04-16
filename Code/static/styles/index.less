@@ -1,4 +1,4 @@
-@bg-color:#b5c1c8;
+@bg-color: #b5c1c8;
 @div-color: darken(@bg-color, 5%);
 
 @button-color: #7c9cdd;
@@ -12,14 +12,21 @@
   text-align: center;
 }
 
-button input[type='submit']{
+button, input[type='submit'] {
   padding-left: 100px;
   padding-right: 100px;
   align-self: center;
   background: @button-color;
+  box-shadow: 5px 5px 5px #61686d;
 
   &:hover {
-    background: darken(@button-color,5%);
+    background: darken(@button-color, 5%);
+    box-shadow: 5px 5px 4px #4a4f53;
+  }
+
+  &:focus{
+    background: darken(@button-color, 10%);
+    box-shadow: 5px 5px 3px #2b2e30;
   }
 }
 
@@ -30,22 +37,24 @@ div {
   border-radius: 5px;
 }
 
-
 label {
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
   text-align: center;
+  box-shadow: 5px 5px 5px #61686d;
 
   &.off {
     background: @off-color;
 
     &:hover {
-      background: darken(@off-color,5%);
+      background: darken(@off-color, 5%);
+      box-shadow: 5px 5px 4px #4a4f53;
     }
 
     &:active {
-      background: darken(@off-color,10%);
+      background: darken(@off-color, 10%);
+      box-shadow: 5px 5px 3px #2b2e30;
     }
   }
 
@@ -53,11 +62,13 @@ label {
     background: @on-color;
 
     &:hover {
-      background: darken(@on-color,5%);
+      background: darken(@on-color, 5%);
+      box-shadow: 5px 5px 4px #4a4f53;
     }
 
     &:active {
-      background: darken(@on-color,10%);
+      background: darken(@on-color, 10%);
+      box-shadow: 5px 5px 3px #2b2e30;
     }
   }
 }

@@ -26,13 +26,16 @@ label {
   padding: 10px;
   margin: 10px;
   text-align: center;
+  box-shadow: 5px 5px 5px #61686d;
 
   &.on {
     background: @on-color;
 
     &:hover {
       background: darken(@on-color, 5%);
+      box-shadow: 5px 5px 4px #4a4f53;
     }
+
   }
 
   &.off {
@@ -40,18 +43,25 @@ label {
 
     &:hover {
       background: darken(@off-color, 5%);
+      box-shadow: 5px 5px 4px #4a4f53;
     }
   }
 }
 
-
 button {
   padding-left: 100px;
   padding-right: 100px;
-  align-self: auto;
-  background: #a5d0f3;
+  align-self: center;
+  background: @button-color;
+  box-shadow: 5px 5px 5px #61686d;
 
   &:hover {
-    background: #5fa2d7;
+    background: darken(@button-color, 5%);
+    box-shadow: 5px 5px 4px #4a4f53;
+  }
+
+  &:focus{
+    background: darken(@button-color, 10%);
+    box-shadow: 5px 5px 3px #2b2e30;
   }
 }

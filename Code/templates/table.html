@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-    <title>Website</title>
+    <title>BoardingPass</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/table.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico')}}">
 </head>
@@ -15,10 +15,7 @@
 <hr/>
 <div>
     {% for key, value in data.items() %}
-    <label class="{{value}}">
-        {{key}}
-    </label>
+    <label class="{{value}}">{{key}}</label>
     {% endfor %}
 </div>
-
 </body>

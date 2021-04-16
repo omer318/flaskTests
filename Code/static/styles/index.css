@@ -4,14 +4,23 @@
   font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
   text-align: center;
 }
-button input[type='submit'] {
+button,
+input[type='submit'] {
   padding-left: 100px;
   padding-right: 100px;
   align-self: center;
   background: #7c9cdd;
+  box-shadow: 5px 5px 5px #61686d;
 }
-button input[type='submit']:hover {
+button:hover,
+input[type='submit']:hover {
   background: #688dd8;
+  box-shadow: 5px 5px 4px #4a4f53;
+}
+button:focus,
+input[type='submit']:focus {
+  background: #547dd2;
+  box-shadow: 5px 5px 3px #2b2e30;
 }
 div {
   background: #a6b5bd;
@@ -24,23 +33,28 @@ label {
   padding: 10px;
   margin: 10px;
   text-align: center;
+  box-shadow: 5px 5px 5px #61686d;
 }
 label.off {
   background: #d93b3b;
 }
 label.off:hover {
   background: #d22929;
+  box-shadow: 5px 5px 4px #4a4f53;
 }
 label.off:active {
   background: #bc2525;
+  box-shadow: 5px 5px 3px #2b2e30;
 }
 label.on {
   background: #7ad67a;
 }
 label.on:hover {
   background: #67d067;
+  box-shadow: 5px 5px 4px #4a4f53;
 }
 label.on:active {
   background: #53ca53;
+  box-shadow: 5px 5px 3px #2b2e30;
 }
 /*# sourceMappingURL=index.css.map */
