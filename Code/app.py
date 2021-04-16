@@ -8,7 +8,7 @@ days = {}
 
 @app.route("/table/")
 def table():
-    return render_template("hello.html", data=days)
+    return render_template("table.html", data=days)
 
 
 @app.route("/submit_days/", methods=["POST"])

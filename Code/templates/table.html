@@ -1,0 +1,24 @@
+<!doctype html>
+<head>
+    <title>Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/table.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico')}}">
+</head>
+<body>
+<div class="nav-bar">
+    <h1>
+        Welcome to the Boarding
+    </h1>
+    <button onclick="window.location.href='/'">Home</button>
+    <button onclick="window.location.href='/table'">Table</button>
+</div>
+<hr/>
+<div>
+    {% for key, value in data.items() %}
+    <label class="{{value}}">
+        {{key}}
+    </label>
+    {% endfor %}
+</div>
+
+</body>
