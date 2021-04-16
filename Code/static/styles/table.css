@@ -4,15 +4,6 @@
   font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
   text-align: center;
 }
-button input[type='submit'] {
-  padding-left: 100px;
-  padding-right: 100px;
-  align-self: center;
-  background: #7c9cdd;
-}
-button input[type='submit']:hover {
-  background: #688dd8;
-}
 div {
   background: #a6b5bd;
   display: inline-block;
@@ -25,22 +16,25 @@ label {
   margin: 10px;
   text-align: center;
 }
-label.off {
-  background: #d93b3b;
-}
-label.off:hover {
-  background: #d22929;
-}
-label.off:active {
-  background: #bc2525;
-}
 label.on {
   background: #7ad67a;
 }
 label.on:hover {
   background: #67d067;
 }
-label.on:active {
-  background: #53ca53;
+label.off {
+  background: #d93b3b;
 }
-/*# sourceMappingURL=index.css.map */
+label.off:hover {
+  background: #d22929;
+}
+button {
+  padding-left: 100px;
+  padding-right: 100px;
+  align-self: auto;
+  background: #a5d0f3;
+}
+button:hover {
+  background: #5fa2d7;
+}
+/*# sourceMappingURL=table.css.map */

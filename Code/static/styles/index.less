@@ -1,0 +1,63 @@
+@bg-color:#b5c1c8;
+@div-color: darken(@bg-color, 5%);
+
+@button-color: #7c9cdd;
+@on-color: #7ad67a;
+@off-color: #d93b3b;
+
+* {
+  background: @bg-color;
+  font-size: xxx-large;
+  font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+  text-align: center;
+}
+
+button input[type='submit']{
+  padding-left: 100px;
+  padding-right: 100px;
+  align-self: center;
+  background: @button-color;
+
+  &:hover {
+    background: darken(@button-color,5%);
+  }
+}
+
+div {
+  background: @div-color;
+  display: inline-block;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+
+label {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+
+  &.off {
+    background: @off-color;
+
+    &:hover {
+      background: darken(@off-color,5%);
+    }
+
+    &:active {
+      background: darken(@off-color,10%);
+    }
+  }
+
+  &.on {
+    background: @on-color;
+
+    &:hover {
+      background: darken(@on-color,5%);
+    }
+
+    &:active {
+      background: darken(@on-color,10%);
+    }
+  }
+}
