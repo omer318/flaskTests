@@ -1,0 +1,75 @@
+*{
+    background: #b6c8e7;
+    font-size: xxx-large;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    text-align: center;
+}
+
+button{
+    padding-left: 100px;
+    padding-right: 100px;
+    align-self: center;
+    background: #a5d0f3;
+}
+
+button:hover{
+    background: #5fa2d7;
+}
+
+div{
+    background: cadetblue;
+    border-radius: 5px;
+}
+
+
+div[name="nav-bar"]{
+
+}
+
+input[type='submit']{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 70px;
+    align-self: center;
+    background: #a5d0f3;
+}
+
+input[type='submit']:hover{
+    background: #5fa2d7;
+}
+
+
+input[type='submit']:focus{
+    background: #0989f5;
+}
+
+label{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+label[class="on"]{
+    background: #7ad67a;
+}
+
+label[class="on"]:hover{
+    background: #60ba60;
+}
+
+label[class="on"]:active{
+    background: #317e31;
+}
+
+label[class="off"]{
+    background: #d93b3b;
+}
+
+label[class="off"]:hover{
+    background: #b03535;
+}
+
+label[class="off"]:active{
+    background: #7c1e1e;
+}

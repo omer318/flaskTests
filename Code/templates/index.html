@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BoardingPass</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/logic.js') }}"></script>
+</head>
+<body>
+<div>
+    <h1>
+        Welcome to the Boarding
+    </h1>
+</div>
+<hr/>
+<div>
+    <a href="/table">
+        <button>Table</button>
+    </a>
+</div>
+<hr/>
+<div>
+    <form id="form" onsubmit='collect()'>
+        <label class="off" id="sunday" name="sunday" onclick="changeState(id)">Sunday</label>
+        <label class="off" id="monday" name="monday" onclick="changeState(id)">Monday</label>
+        <label class="off" id="tuesday" name="tuesday" onclick="changeState(id)">Tuesday</label>
+        <label class="off" id="wednesday" name="wednesday" onclick="changeState(id)">Wednesday</label>
+        <label class="off" id="thursday" name="thursday" onclick="changeState(id)">Thursday</label>
+        <br/>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
