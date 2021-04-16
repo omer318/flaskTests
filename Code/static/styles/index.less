@@ -6,69 +6,73 @@
 @off-color: #d93b3b;
 
 * {
-  background: @bg-color;
-  font-size: xxx-large;
-  font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
-  text-align: center;
+    background: @bg-color;
+    font-size: xxx-large;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    text-align: center;
 }
 
 button, input[type='submit'] {
-  padding-left: 100px;
-  padding-right: 100px;
-  align-self: center;
-  background: @button-color;
-  box-shadow: 5px 5px 5px #61686d;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-self: center;
+    background: @button-color;
+    box-shadow: 5px 5px 5px #61686d;
 
-  &:hover {
-    background: darken(@button-color, 5%);
-    box-shadow: 5px 5px 4px #4a4f53;
-  }
+    &:hover {
+        background: darken(@button-color, 5%);
+        box-shadow: 5px 5px 4px #4a4f53;
+    }
 
-  &:focus{
-    background: darken(@button-color, 10%);
-    box-shadow: 5px 5px 3px #2b2e30;
-  }
+    &:focus {
+        background: darken(@button-color, 10%);
+        box-shadow: 5px 5px 3px #2b2e30;
+    }
 }
 
 div {
-  background: @div-color;
-  display: inline-block;
-  padding: 30px;
-  border-radius: 5px;
+    background: @div-color;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 5px;
+
+    .nav-bar {
+
+    }
 }
 
 label {
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-  box-shadow: 5px 5px 5px #61686d;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 5px #61686d;
 
-  &.off {
-    background: @off-color;
+    &.off {
+        background: @off-color;
 
-    &:hover {
-      background: darken(@off-color, 5%);
-      box-shadow: 5px 5px 4px #4a4f53;
+        &:hover {
+            background: darken(@off-color, 5%);
+            box-shadow: 5px 5px 4px #4a4f53;
+        }
+
+        &:active {
+            background: darken(@off-color, 10%);
+            box-shadow: 5px 5px 3px #2b2e30;
+        }
     }
 
-    &:active {
-      background: darken(@off-color, 10%);
-      box-shadow: 5px 5px 3px #2b2e30;
-    }
-  }
+    &.on {
+        background: @on-color;
 
-  &.on {
-    background: @on-color;
+        &:hover {
+            background: darken(@on-color, 5%);
+            box-shadow: 5px 5px 4px #4a4f53;
+        }
 
-    &:hover {
-      background: darken(@on-color, 5%);
-      box-shadow: 5px 5px 4px #4a4f53;
+        &:active {
+            background: darken(@on-color, 10%);
+            box-shadow: 5px 5px 3px #2b2e30;
+        }
     }
-
-    &:active {
-      background: darken(@on-color, 10%);
-      box-shadow: 5px 5px 3px #2b2e30;
-    }
-  }
 }
