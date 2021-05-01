@@ -15,16 +15,17 @@
     <button onclick="window.location.href='/table'">Table</button>
 </div>
 <hr/>
-<form id="form" onsubmit='collect()'>
+<form id="form" onsubmit='collect(event)'>
     <div>
-        <label class="off" id="sunday" name="sunday" onclick="changeState(id)">Sunday</label>
-        <label class="off" id="monday" name="monday" onclick="changeState(id)">Monday</label>
-        <label class="off" id="tuesday" name="tuesday" onclick="changeState(id)">Tuesday</label>
-        <label class="off" id="wednesday" name="wednesday" onclick="changeState(id)">Wednesday</label>
-        <label class="off" id="thursday" name="thursday" onclick="changeState(id)">Thursday</label>
+        <label class="on" id="sunday" name="sunday" onclick="changeState(id)">Sunday</label>
+        <label class="on" id="monday" name="monday" onclick="changeState(id)">Monday</label>
+        <label class="on" id="tuesday" name="tuesday" onclick="changeState(id)">Tuesday</label>
+        <label class="on" id="wednesday" name="wednesday" onclick="changeState(id)">Wednesday</label>
+        <label class="on" id="thursday" name="thursday" onclick="changeState(id)">Thursday</label>
     </div>
     <br/>
     <div>
+        <input type="text" id="name">
         <input type="submit" value="Submit">
     </div>
 </form>

@@ -4,18 +4,22 @@ function changeState(id) {
 }
 
 
-function collect() {
+function collect(e) {
+    e.preventDefault()
     let form = document.getElementById("form").getElementsByTagName("label")
     let data = {}
+    let days = {}
+    data["name"] = document.getElementById("name").value
     for (let i = 0; i < 5; i++) {
-        data[capitalize(form[i].id)] = form[i].className
+        days[capitalize(form[i].id)] = form[i].className
     }
+    data["days"] = days
     console.log(JSON.stringify(data))
 
 
     fetch("/submit_days/", {method: "POST", redirect: "follow", body: JSON.stringify(data)}).then(response => {
-        if (response.redirected) {
-            window.location.href = response.url;
+        if (response.ok) {
+            window.location.href = "/table/";
         }
     })
     return "fs"
@@ -23,6 +27,6 @@ function collect() {
 
 
 const capitalize = (s) => {
-  if (typeof s !== 'string') return ''
-  return s.charAt(0).toUpperCase() + s.slice(1)
+    if (typeof s !== 'string') return ''
+    return s.charAt(0).toUpperCase() + s.slice(1)
 }

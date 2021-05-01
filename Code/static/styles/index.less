@@ -1,9 +1,18 @@
 @bg-color: #b5c1c8;
 @div-color: darken(@bg-color, 5%);
-
+@shadow-color: #61686d;
 @button-color: #7c9cdd;
 @on-color: #7ad67a;
 @off-color: #d93b3b;
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 
 * {
     background: @bg-color;
@@ -15,18 +24,17 @@
 button, input[type='submit'] {
     padding-left: 100px;
     padding-right: 100px;
-    align-self: center;
     background: @button-color;
-    box-shadow: 5px 5px 5px #61686d;
+    box-shadow: 5px 5px 5px @shadow-color;
 
     &:hover {
         background: darken(@button-color, 5%);
-        box-shadow: 5px 5px 4px #4a4f53;
+        box-shadow: 5px 5px 4px darken(@shadow-color, 10%);
     }
 
     &:focus {
         background: darken(@button-color, 10%);
-        box-shadow: 5px 5px 3px #2b2e30;
+        box-shadow: 5px 5px 3px darken(@shadow-color, 20%);
     }
 }
 
@@ -36,8 +44,19 @@ div {
     padding: 30px;
     border-radius: 5px;
 
-    .nav-bar {
+    &.nav-bar {
+        background: darken(@div-color, 30%);
+        width: 100%;
+        border-radius: unset;
+        font-weight: bold;
+        padding: 10px;
 
+        & > button {
+            background: darken(@div-color, 10%);
+            padding-left: unset;
+            padding-right: unset;
+            display: compact;
+        }
     }
 }
 
@@ -46,19 +65,19 @@ label {
     padding: 10px;
     margin: 10px;
     text-align: center;
-    box-shadow: 5px 5px 5px #61686d;
+    box-shadow: 5px 5px 5px @shadow-color;
 
     &.off {
         background: @off-color;
 
         &:hover {
             background: darken(@off-color, 5%);
-            box-shadow: 5px 5px 4px #4a4f53;
+            box-shadow: 5px 5px 4px darken(@shadow-color, 10%);
         }
 
         &:active {
             background: darken(@off-color, 10%);
-            box-shadow: 5px 5px 3px #2b2e30;
+            box-shadow: 5px 5px 3px darken(@shadow-color, 20%);
         }
     }
 
@@ -67,12 +86,12 @@ label {
 
         &:hover {
             background: darken(@on-color, 5%);
-            box-shadow: 5px 5px 4px #4a4f53;
+            box-shadow: 5px 5px 4px darken(@shadow-color, 10%);
         }
 
         &:active {
             background: darken(@on-color, 10%);
-            box-shadow: 5px 5px 3px #2b2e30;
+            box-shadow: 5px 5px 3px darken(@shadow-color, 20%);
         }
     }
 }

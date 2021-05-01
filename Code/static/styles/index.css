@@ -1,3 +1,10 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 * {
   background: #b5c1c8;
   font-size: xxx-large;
@@ -8,25 +15,37 @@ button,
 input[type='submit'] {
   padding-left: 100px;
   padding-right: 100px;
-  align-self: center;
   background: #7c9cdd;
   box-shadow: 5px 5px 5px #61686d;
 }
 button:hover,
 input[type='submit']:hover {
   background: #688dd8;
-  box-shadow: 5px 5px 4px #4a4f53;
+  box-shadow: 5px 5px 4px #494e52;
 }
 button:focus,
 input[type='submit']:focus {
   background: #547dd2;
-  box-shadow: 5px 5px 3px #2b2e30;
+  box-shadow: 5px 5px 3px #313537;
 }
 div {
   background: #a6b5bd;
   display: inline-block;
   padding: 30px;
   border-radius: 5px;
+}
+div.nav-bar {
+  background: #566974;
+  width: 100%;
+  border-radius: unset;
+  font-weight: bold;
+  padding: 10px;
+}
+div.nav-bar > button {
+  background: #899ca7;
+  padding-left: unset;
+  padding-right: unset;
+  display: compact;
 }
 label {
   border-radius: 10px;
@@ -40,21 +59,21 @@ label.off {
 }
 label.off:hover {
   background: #d22929;
-  box-shadow: 5px 5px 4px #4a4f53;
+  box-shadow: 5px 5px 4px #494e52;
 }
 label.off:active {
   background: #bc2525;
-  box-shadow: 5px 5px 3px #2b2e30;
+  box-shadow: 5px 5px 3px #313537;
 }
 label.on {
   background: #7ad67a;
 }
 label.on:hover {
   background: #67d067;
-  box-shadow: 5px 5px 4px #4a4f53;
+  box-shadow: 5px 5px 4px #494e52;
 }
 label.on:active {
   background: #53ca53;
-  box-shadow: 5px 5px 3px #2b2e30;
+  box-shadow: 5px 5px 3px #313537;
 }
 /*# sourceMappingURL=index.css.map */

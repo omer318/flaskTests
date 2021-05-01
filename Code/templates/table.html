@@ -6,16 +6,48 @@
 </head>
 <body>
 <div class="nav-bar">
-    <h1>
-        Welcome to the Boarding
-    </h1>
+    Welcome to the Boarding
     <button onclick="window.location.href='/'">Home</button>
     <button onclick="window.location.href='/table'">Table</button>
 </div>
 <hr/>
 <div>
-    {% for key, value in data.items() %}
-    <label class="{{value}}">{{key}}</label>
-    {% endfor %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Points</th>
+            {% for day in DAYS %}
+            <th>{{day}}</th>
+            {% endfor %}
+        </tr>
+        {% for user in data %}
+        <tr>
+            <th>{{user.name}}</th>
+            <td>{{user.points}}</td>
+            {% for key, value in user.days.items() %}
+            <td class="{{value}}"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <hr/>
+    <table>
+        <tr>
+            <h3>OVERALL</h3>
+        </tr>
+        <tr>
+            {% for day in DAYS %}
+            <th>{{day}}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for key, value in options.items() %}
+            <td>{% for name in value %}{{name}}
+                <br>
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+    </table>
 </div>
 </body>
