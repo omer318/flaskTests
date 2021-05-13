@@ -34,46 +34,64 @@ div {
   padding: 30px;
   border-radius: 5px;
 }
+div:empty {
+  display: none;
+}
 div.nav-bar {
   background: #566974;
+  float: left;
   width: 100%;
+  text-align: left;
+  font-size: 45px;
   border-radius: unset;
   font-weight: bold;
-  padding: 10px;
+  padding: 5px;
+  top: 0;
+  overflow: hidden;
+}
+div.nav-bar span {
+  margin-right: 40px;
+  background: #899ca7;
 }
 div.nav-bar > button {
   background: #899ca7;
   padding-left: unset;
   padding-right: unset;
   display: compact;
+  font-size: inherit;
+  margin-right: 40px;
 }
-label {
+div label {
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
   text-align: center;
   box-shadow: 5px 5px 5px #61686d;
 }
-label.off {
+div label.off {
   background: #d93b3b;
 }
-label.off:hover {
+div label.off:hover {
   background: #d22929;
   box-shadow: 5px 5px 4px #494e52;
 }
-label.off:active {
+div label.off:active {
   background: #bc2525;
   box-shadow: 5px 5px 3px #313537;
 }
-label.on {
+div label.on {
   background: #7ad67a;
 }
-label.on:hover {
+div label.on:hover {
   background: #67d067;
   box-shadow: 5px 5px 4px #494e52;
 }
-label.on:active {
+div label.on:active {
   background: #53ca53;
   box-shadow: 5px 5px 3px #313537;
+}
+hr {
+  display: inline-block;
+  width: 100%;
 }
 /*# sourceMappingURL=index.css.map */

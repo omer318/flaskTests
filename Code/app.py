@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import json
 from markupsafe import escape
 import pymongo
+import pymongo.errors
 
 from Code.user import User
 
@@ -36,7 +37,9 @@ def submit():
     data = request.data.decode()
     print(data)
     user = User.from_dict(json.loads(data))
-    save(user)
+    message = save(user)
+    if message is not None:
+        return json.dumps({'message': message}), 400
     return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
 
@@ -46,9 +49,12 @@ def index():
 
 
 def save(user):
-    if user.name == "":
-        return None
-    db.insert_one(user.as_dict())
+    try:
+        if user.name == "":
+            return "Empty Users Are Not Allowed"
+        db.insert_one(user.as_dict())
+    except pymongo.errors.DuplicateKeyError:
+        return "User is already registered."
 
 
 def get_user_by_name(name):

@@ -4,7 +4,7 @@ function changeState(id) {
 }
 
 
-function collect(e) {
+async function collect(e) {
     e.preventDefault()
     let form = document.getElementById("form").getElementsByTagName("label")
     let data = {}
@@ -17,16 +17,23 @@ function collect(e) {
     console.log(JSON.stringify(data))
 
 
-    fetch("/submit_days/", {method: "POST", redirect: "follow", body: JSON.stringify(data)}).then(response => {
-        if (response.ok) {
-            window.location.href = "/table/";
-        }
-    })
-    return "fs"
+    let response = await fetch("/submit_days/", {method: "POST", redirect: "follow", body: JSON.stringify(data)});
+
+    if (response.ok) { // if HTTP-status is 200-299
+        // get the response body (the method explained below)
+        window.location.href = "/table/";
+    } else {
+        let res = await response.json()
+        setErrorMessage(res["message"])
+    }
 }
 
 
 const capitalize = (s) => {
     if (typeof s !== 'string') return ''
     return s.charAt(0).toUpperCase() + s.slice(1)
+}
+
+function setErrorMessage(message){
+    document.getElementById("error_box").innerText = message
 }

@@ -44,54 +44,75 @@ div {
     padding: 30px;
     border-radius: 5px;
 
+    &:empty{
+            display: none;
+        }
+
     &.nav-bar {
         background: darken(@div-color, 30%);
+        float: left;
         width: 100%;
+        text-align: left;
+        font-size: 45px;
         border-radius: unset;
         font-weight: bold;
-        padding: 10px;
+        padding: 5px;
+        top: 0;
+        overflow: hidden;
 
+        & span{
+            margin-right: 40px;
+            background: darken(@div-color, 10%);
+        }
         & > button {
             background: darken(@div-color, 10%);
             padding-left: unset;
             padding-right: unset;
             display: compact;
+            font-size: inherit;
+            margin-right: 40px;
+        }
+
+    }
+
+    label {
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        box-shadow: 5px 5px 5px @shadow-color;
+
+        &.off {
+            background: @off-color;
+
+            &:hover {
+                background: darken(@off-color, 5%);
+                box-shadow: 5px 5px 4px darken(@shadow-color, 10%);
+            }
+
+            &:active {
+                background: darken(@off-color, 10%);
+                box-shadow: 5px 5px 3px darken(@shadow-color, 20%);
+            }
+        }
+
+        &.on {
+            background: @on-color;
+
+            &:hover {
+                background: darken(@on-color, 5%);
+                box-shadow: 5px 5px 4px darken(@shadow-color, 10%);
+            }
+
+            &:active {
+                background: darken(@on-color, 10%);
+                box-shadow: 5px 5px 3px darken(@shadow-color, 20%);
+            }
         }
     }
 }
 
-label {
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 5px 5px 5px @shadow-color;
-
-    &.off {
-        background: @off-color;
-
-        &:hover {
-            background: darken(@off-color, 5%);
-            box-shadow: 5px 5px 4px darken(@shadow-color, 10%);
-        }
-
-        &:active {
-            background: darken(@off-color, 10%);
-            box-shadow: 5px 5px 3px darken(@shadow-color, 20%);
-        }
-    }
-
-    &.on {
-        background: @on-color;
-
-        &:hover {
-            background: darken(@on-color, 5%);
-            box-shadow: 5px 5px 4px darken(@shadow-color, 10%);
-        }
-
-        &:active {
-            background: darken(@on-color, 10%);
-            box-shadow: 5px 5px 3px darken(@shadow-color, 20%);
-        }
-    }
+hr {
+    display: inline-block;
+    width: 100%;
 }

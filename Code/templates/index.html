@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/logic.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/index_code.js') }}"></script>
 </head>
 <body>
 <div class="nav-bar">
-    Welcome to the Boarding
+    <span>Welcome to the Boarding</span>
     <button onclick="window.location.href='/'">Home</button>
     <button onclick="window.location.href='/table'">Table</button>
 </div>
@@ -29,5 +29,6 @@
         <input type="submit" value="Submit">
     </div>
 </form>
+<div id="error_box"></div>
 </body>
 </html>
